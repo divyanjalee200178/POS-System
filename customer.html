@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Customer Form</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<style>
+
+    #text{
+        margin-left: 0px;
+        margin-top: -10px;
+    }
+    .mb-3>label{
+        margin-top: -230px;
+        margin-left: 0px;
+        height: 30px;
+    }
+    .card-header{
+        font-size: 25px;
+        background: #3A0FFA;
+    }
+    .nav-link{
+        text-align: center;
+        margin-top:-50px;
+    }
+    #exampleInputEmail1{
+        height: 40px;
+        margin-top: 5px;
+        width: 1000px;
+    }
+    .col>button{
+        margin-top: 20px;
+        background: plum;
+    }
+    .table{
+        margin-top: 25px;
+        border: 2px solid black;
+    }
+</style>
+<body>
+
+
+<div class="card border-success mb-3" style="max-width: 300rem;">
+    <div class="card-header">
+        <div>
+            <h3>Customer search</h3>
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="dashboard.html">Dashbord</a>
+                </li>
+            </ul>
+        </div>
+
+    </div><br>
+
+        <form class="row g-3">
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">NIC number :</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            </div>
+            <div>
+               <h6 id="text">name :</h6>
+               <select class="form-select" aria-label="Default select example">
+                   <option selected>Open this select menu</option>
+                   <option value="1">One</option>
+                   <option value="2">Two</option>
+                   <option value="3">Three</option>
+               </select>
+            </div>
+
+            <div class="container text-center">
+                <div class="row">
+                    <div class="col">
+                        <button type="button" class="btn btn-outline-primary">
+                            <a href="newCus.html">Add new customer</a>
+                        </button>
+                    </div>
+
+                    <div class="col">
+                        <button type="button" class="btn btn-outline-secondary">View all</button>
+                    </div>
+
+
+                    <div class="col">
+                        <button type="button" class="btn btn-outline-success">Details</button>
+                    </div>
+
+
+                    <div class="col">
+                        <button type="button" class="btn btn-outline-danger">Clear</button>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <table  class="table table-success table-striped" >
+                <thead>
+                <tr class="table-dark">
+                    <th scope="col">ID</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Address</th>
+                    <th scope="col">Contact</th>
+                    <th scope="col">Email</th>
+                    <th>Actions</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                    <td>@mdo</td>
+                    <td>
+                        <button class="btn btn-sm btn-primary">Edit</button>
+                        <button class="btn btn-sm btn-danger">Delete</button>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                    <td>@mdo</td>
+                    <td>
+                        <button class="btn btn-sm btn-primary">Edit</button>
+                        <button class="btn btn-sm btn-danger">Delete</button>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                    <td>@mdo</td>
+                    <td>
+                        <button class="btn btn-sm btn-primary">Edit</button>
+                        <button class="btn btn-sm btn-danger">Delete</button>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                    <td>@mdo</td>
+                    <td>
+                        <button class="btn btn-sm btn-primary">Edit</button>
+                        <button class="btn btn-sm btn-danger">Delete</button>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+
+        </form>
+    </div>
+    </div>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
