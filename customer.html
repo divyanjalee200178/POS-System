@@ -7,10 +7,7 @@
 </head>
 <style>
 
-    #text{
-        margin-left: 0px;
-        margin-top: -10px;
-    }
+
     .mb-3>label{
         margin-top: -230px;
         margin-left: 0px;
@@ -18,12 +15,12 @@
     }
     .card-header{
         font-size: 25px;
-        background: #3A0FFA;
+        background: #4824f6;
     }
-    .nav-link{
-        text-align: center;
-        margin-top:-50px;
-    }
+    /*.nav-link{*/
+    /*    text-align: center;*/
+    /*    margin-top:-50px;*/
+    /*}*/
     #exampleInputEmail1{
         height: 40px;
         margin-top: 5px;
@@ -31,132 +28,107 @@
     }
     .col>button{
         margin-top: 20px;
-        background: plum;
+        background: #25f3c3;
     }
     .table{
         margin-top: 25px;
         border: 2px solid black;
     }
+    .card{
+        background: #c4ec86;
+    }
 </style>
 <body>
 
 
-<div class="card border-success mb-3" style="max-width: 300rem;">
-    <div class="card-header">
-        <div>
-            <h3>Customer search</h3>
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">Customer management</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="dashboard.html">Dashbord</a>
+                    <a class="nav-link" href="index.html">Dashboard</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="customer.html">Customer Management</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Item.html">Item Management</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="order.html">Place Order</a>
+                </li>
+
             </ul>
         </div>
+    </div>
+</nav>
 
-    </div><br>
+<div class="container mt-5">
 
-        <form class="row g-3">
-            <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label">NIC number :</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-            </div>
-            <div>
-               <h6 id="text">name :</h6>
-               <select class="form-select" aria-label="Default select example">
-                   <option selected>Open this select menu</option>
-                   <option value="1">One</option>
-                   <option value="2">Two</option>
-                   <option value="3">Three</option>
-               </select>
-            </div>
-
-            <div class="container text-center">
-                <div class="row">
+    <!-- Customer Form -->
+    <div class="card my-4">
+        <div class="card-header">Enter Customer Details</div>
+        <div class="card-body">
+            <form id="customerForm">
+                <div class="row mb-3">
                     <div class="col">
-                        <button type="button" class="btn btn-outline-primary">
-                            <a href="newCus.html">Add new customer</a>
-                        </button>
+                        <label for="firstName" class="form-label">First Name</label>
+                        <input type="text" class="form-control" id="firstName" placeholder="First Name" required>
                     </div>
-
                     <div class="col">
-                        <button type="button" class="btn btn-outline-secondary">View all</button>
-                    </div>
-
-
-                    <div class="col">
-                        <button type="button" class="btn btn-outline-success">Details</button>
-                    </div>
-
-
-                    <div class="col">
-                        <button type="button" class="btn btn-outline-danger">Clear</button>
+                        <label for="lastName" class="form-label">Last Name</label>
+                        <input type="text" class="form-control" id="lastName" placeholder="Last Name" required>
                     </div>
                 </div>
-            </div>
-
-
-
-            <table  class="table table-success table-striped" >
-                <thead>
-                <tr class="table-dark">
-                    <th scope="col">ID</th>
-                    <th scope="col">Name</th>
-                    <th scope="col">Address</th>
-                    <th scope="col">Contact</th>
-                    <th scope="col">Email</th>
-                    <th>Actions</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                    <td>@mdo</td>
-                    <td>
-                        <button class="btn btn-sm btn-primary">Edit</button>
-                        <button class="btn btn-sm btn-danger">Delete</button>
-                    </td>
-                </tr>
-                <tr>
-                    <th scope="row">2</th>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
-                    <td>@mdo</td>
-                    <td>
-                        <button class="btn btn-sm btn-primary">Edit</button>
-                        <button class="btn btn-sm btn-danger">Delete</button>
-                    </td>
-                </tr>
-                <tr>
-                    <th scope="row">2</th>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
-                    <td>@mdo</td>
-                    <td>
-                        <button class="btn btn-sm btn-primary">Edit</button>
-                        <button class="btn btn-sm btn-danger">Delete</button>
-                    </td>
-                </tr>
-                <tr>
-                    <th scope="row">2</th>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
-                    <td>@mdo</td>
-                    <td>
-                        <button class="btn btn-sm btn-primary">Edit</button>
-                        <button class="btn btn-sm btn-danger">Delete</button>
-                    </td>
-                </tr>
-                </tbody>
-            </table>
-
-        </form>
+                <div class="row mb-3">
+                    <div class="col">
+                        <label for="mobile" class="form-label">Mobile Number</label>
+                        <input type="text" class="form-control" id="mobile" placeholder="Mobile Number" required>
+                    </div>
+                    <div class="col">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" placeholder="Email" required>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="address" class="form-label">Address</label>
+                    <textarea class="form-control" id="address" rows="3" placeholder="Enter Address" required></textarea>
+                </div>
+                <div class="container text-center">
+                    <div class="row ">
+                        <div class="col"><button type="button" class="btn btn-primary" id="cusbtn">Add Customer</button></div>
+                        <div class="col"><button type="button" class="btn btn-secondary">Update</button></div>
+                        <div class="col"><button type="button" class="btn btn-success">Delete</button></div>
+                        <div class="col"><button type="button" class="btn btn-danger">Exit</button></div>
+                    </div>
+                </div>
+            </form>
+        </div>
     </div>
-    </div>
+
+    <!-- Customer Table -->
+    <h3 class="mt-5">Customer List</h3>
+    <table class="table table-bordered table-striped mt-3">
+        <thead>
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Mobile Number</th>
+            <th>Email</th>
+            <th>Address</th>
+        </tr>
+        </thead>
+        <tbody id="customerTableBody">
+        <!-- Customer rows will be added here -->
+        </tbody>
+    </table>
+</div>
+
+
 
 
 
