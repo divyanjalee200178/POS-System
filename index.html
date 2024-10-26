@@ -8,7 +8,7 @@
 
 </head>
 <style>
-    .card{
+    .card1{
         border: 2px solid black;
         margin-top: 50px;
 
@@ -24,24 +24,16 @@
     .btn>a{
         color: white;
     }
-    .card{
-        background: #0b77ce;
+    .card1{
+        background: gray;
     }
-    -----------------
 
-    #text{
-        margin-left: 0px;
-        margin-top: -10px;
-    }
     .mb-3>label{
         margin-top: -230px;
         margin-left: 0px;
         height: 30px;
     }
-    .card1-header{
-        font-size: 25px;
-        background: #4824f6;
-    }
+
     /*.nav-link{*/
     /*    text-align: center;*/
     /*    margin-top:-50px;*/
@@ -53,15 +45,13 @@
     }
     .col>button{
         margin-top: 20px;
-        background: #25f3c3;
+        background: purple;
     }
     .table{
         margin-top: 25px;
         border: 2px solid black;
     }
-    .card1{
-        background: #c4ec86;
-    }
+
 
     /*!*-----------------------------------------------*!*/
     .btn{
@@ -74,7 +64,7 @@
     }
     .card2-header{
         font-size: 25px;
-        background: #3A0FFA;
+        background: grey;
     }
     .table{
         margin-top: 25px;
@@ -171,22 +161,46 @@
     .btn{
         margin-top: 10px;
     }
-    .nav1-link{
-        border: 2px solid white;
-        /*width: fit-content;*/
-        background: #00008B;
 
-    }
-    /*.navbar{*/
-    /*    background: blue;*/
-    /*    margin-top: 50px;*/
-    /*}*/
 
     .nav-item{
 
     }
+    .card{
+        margin: 100px 30px;
+        gap: 50px;
+    }
+/*---------------Customer form-----------------------*/
+    .card{
+        background: #0073CF;
+    }
+    .card-header1{
+        background: grey;
+    }
+
+    #cusbtn{
+        background: hotpink;
+    }
+
+    /*---------------Item form-----------------------*/
+
+    .card3{
+        background: #0073CF;
+        border-radius: 20px;
+    }
+    .card-header3{
+        background: grey;
+        border-radius: 20px;
+        text-align: center;
+    }
+    #item_form{
+        margin-top: 20px;
+    }
+
 
 </style>
+
+
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
@@ -215,8 +229,8 @@
 </nav>
 
 
-
-<div class="card mb-3" id="dashboard-section" style="max-width: 300rem;">
+<!-- Dashboard Form -->
+<div class="card1 mb-3" id="dashboard-section" style="max-width: 300rem;">
     <div class="row g-0">
         <div class="col-md-4">
             <img src="../asset/images/girl.jpg" class="img-fluid rounded-start" alt="...">
@@ -224,26 +238,36 @@
         <div class="col-md-8">
             <div class="card-body">
                 <h5 class="card-title" >Dash Board</h5>
-                <div>
-                    <div class="d-grid gap-2">
-                        <button class="btn btn-primary" type="button">
-                            <a href="">Customer Form</a>
-                        </button>
-                        <button class="btn btn-primary" type="button">
-                            <a href="">Item Form</a>
-                        </button>
-                        <div class="d-grid gap-2">
-                            <button class="btn btn-primary" type="button">
-                                <a href=""> Order Form</a>
-                            </button>
-                            <button class="btn btn-primary" id="dashboard-nav1" type="button">
-                                <a href=""> dashboard Form</a>
-                            </button>
+                <div class="row">
+                    <!-- Customer Count Card -->
+                    <div class="col-md-3">
+                        <div class="card text-white bg-danger mb-3">
+                            <div class="card-body">
+                                <h5 class="card-title">Customers</h5>
+                                <p class="card-text fs-2" id="customerCount">100</p>
+                            </div>
                         </div>
                     </div>
+                    <!-- Item Count Card -->
+                    <div class="col-md-3">
+                        <div class="card text-white bg-success mb-3">
+                            <div class="card-body">
+                                <h5 class="card-title">Items</h5>
+                                <p class="card-text fs-2" id="itemCount">50</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Order Count Card -->
+                    <div class="col-md-3">
+                        <div class="card text-white bg-warning mb-3">
+                            <div class="card-body">
+                                <h5 class="card-title">Orders</h5>
+                                <p class="card-text fs-2" id="orderCount">150</p>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
-
-
             </div>
         </div>
     </div>
@@ -253,7 +277,9 @@
 
     <!-- Customer Form -->
     <div class="card my-4">
-        <div class="card-header">Enter Customer Details</div>
+        <div class="card-header1">Enter Customer Details</div>
+
+
         <div class="card-body">
             <form id="customerForm">
                 <div class="row mb-3">
@@ -282,10 +308,10 @@
                 </div>
                 <div class="container text-center">
                     <div class="row ">
-                        <div class="col"><button type="button" class="btn btn-primary" id="cusbtn">Add Customer</button></div>
-                        <div class="col"><button type="button" class="btn btn-secondary">Update</button></div>
-                        <div class="col"><button type="button" class="btn btn-success">Delete</button></div>
-                        <div class="col"><button type="button" class="btn btn-danger">Exit</button></div>
+                        <div class="col"><button type="button" class="btn btn-primary" id="cusbtn" >Add Customer</button></div>
+                        <div class="col"><button type="button" class="btn btn-secondary" id="cusbtn2">Update</button></div>
+                        <div class="col"><button type="button" class="btn btn-success" id="cusbtn3">Delete</button></div>
+                        <div class="col"><button type="button" class="btn btn-danger" id="cusbtn4">Exit</button></div>
                     </div>
                 </div>
 
@@ -306,153 +332,65 @@
         </tr>
         </thead>
         <tbody id="customerTableBody">
-
         </tbody>
     </table>
 </div>
 
 
 
-<div class="card2 border-success mb-3" id="item-section" style="max-width: 300rem;">
-    <div class="card2-header">
-        <div>
-            <h3>Item search</h3>
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="index.html">Dashbord</a>
-                </li>
-            </ul>
-        </div>
-
-    </div><br>
-
-    <div class="container text-start">
-        <div class="row row-cols-2 row-xs-2 row-sm-4 row-md-4 row-lg-4 row-xl-2 row-xxl-2">
-            <div class="mb-3">
-                <label for="ex1" class="form-label" id="labl1">Item code :</label>
-                <input type="email" class="form-control" id="exa1" aria-describedby="emailHelp">
-            </div>
-
-            <div class="mb-3">
-                <label for="ex2" class="form-label" id="labl2">Item Name :</label>
-                <input type="email" class="form-control" id="exa2" aria-describedby="emailHelp">
-            </div>
-
-            <div class="mb-3">
-                <label for="ex3" class="form-label" id="labl3">QtyOnHand :</label>
-                <input type="email" class="form-control" id="exa3" aria-describedby="emailHelp">
-            </div>
-
-            <div class="mb-3">
-                <label for="ex4" class="form-label" id="labl4">Unit  Price :</label>
-                <input type="email" class="form-control" id="exa4" aria-describedby="emailHelp">
-            </div>
-        </div>
+<div id="item-section" class="container mt-5">
+<div class="card3 text-start">
+    <div class="card-header3">
+        Enter Item's Details
     </div>
-
-
-    <div class="container text-center">
-        <div class="row">
-            <div class="col">
-                <button type="button" class="btn btn-secondary register-btn custom-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">Register New Item
-                    <!--                    <a href="newItem.html">Add new Item</a>-->
-                </button></div>
-
-            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h1 class="modal-title fs-5" id="exampleModalLabel">Add Item Details</h1>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                            <div class="row">
-                                <div class="col-md-6 mb-3">
-                                    <label class="customerID"  id="input-field_01">Item Code</label>
-                                    <input id="id-input" type="text" class="form-control" placeholder="Customer ID">
-                                </div>
-
-                                <div class="col-md-6 mb-3">
-                                    <label class="customerName"  id="input-field_02">Item Name</label>
-                                    <input id="name-input" type="text" class="form-control" placeholder="Customer Name">
-                                </div>
-                            </div>
-
-                            <div class="row">
-                                <div class="col-md-6 mb-3">
-                                    <label class="customerAddress" id="input-field_03">Item qty</label>
-                                    <input id="address-input" type="text" class="form-control" placeholder="Customer Address">
-                                </div>
-
-                                <div class="col-md-6 mb-3">
-                                    <label class="contact" id="input-field_04">Unit Price</label>
-                                    <input id="contact" type="text" class="form-control" placeholder="Contact Details">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary close-btn custom-btn" data-bs-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-secondary save-button custom-btn">Register</button>
-                        </div>
-                    </div>
+    <div class="card-body3">
+        <form class="row g-3" id="item_form">
+            <div class="row mb-3">
+            <div class="col-md-6">
+                <label for="name" class="form-label">Item name:</label>
+                <input type="text" class="form-control" id="name" placeholder="Name" required>
+            </div>
+            <div class="col-md-6">
+                <label for="unitPrice" class="form-label">Unit price :</label>
+                <input type="text" class="form-control" id="unitPrice" placeholder="UnitPrice" required>
+            </div>
+                <div class="col-md-6">
+                    <label for="qty" class="form-label">Qty :</label>
+                    <input type="text" class="form-control" id="qty" placeholder="Qty" required>
+                </div><br>
+                <div class="mb-3">
+                    <label for="description" class="form-label">Description</label>
+                    <textarea class="form-control" id="description" rows="3" placeholder="Enter Description" required></textarea>
                 </div>
             </div>
-            <!--                <div>-->
-            <!--                    <button type="button" class="btn btn-secondary register-btn custom-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">-->
-            <!--                    </button>-->
-            <!--                </div>-->
-            <div class="col"><button type="button" class="btn btn-secondary">Search</button></div>
-            <div class="col"><button type="button" class="btn btn-success">View all</button></div>
-            <div class="col"><button type="button" class="btn btn-danger">Clear</button></div>
-            <!--                <div class="col"><button type="button" class="btn btn-warning">Warning</button></div>-->
-        </div>
+
+            <div class="container text-center">
+                <div class="row ">
+                    <div class="col"><button type="button" class="btn btn-primary" id="itbtn" >Add Item</button></div>
+                    <div class="col"><button type="button" class="btn btn-secondary" id="itbtn2">Update</button></div>
+                    <div class="col"><button type="button" class="btn btn-success" id="itbtn3">Delete</button></div>
+                    <div class="col"><button type="button" class="btn btn-danger" id="itbtn4">Exit</button></div>
+                </div>
+            </div>
+        </form>
+
     </div>
-    <table  class="table table-success table-striped" >
-        <thead>
-        <tr class="table-dark">
-            <th scope="col">Code</th>
-            <th scope="col">Name</th>
-            <th scope="col">Unit Price</th>
-            <th scope="col">Qty</th>
-            <th>Actions</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
-            <td>
-                <button class="btn btn-sm btn-primary">Edit</button>
-                <button class="btn btn-sm btn-danger">Delete</button>
-            </td>
-        </tr>
-        <tr>
-            <th scope="row">2</th>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td>@fat</td>
-            <td>
-                <button class="btn btn-sm btn-primary">Edit</button>
-                <button class="btn btn-sm btn-danger">Delete</button>
-            </td>
-        </tr>
-        <tr>
-            <th scope="row">2</th>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td>@fat</td>
-            <td>
-                <button class="btn btn-sm btn-primary">Edit</button>
-                <button class="btn btn-sm btn-danger">Delete</button>
-            </td>
-        </tr>
+</div>
+<!-- Item Table -->
+<h3 class="mt-5">Item List</h3>
+<table class="table table-bordered table-striped mt-3">
+    <thead>
+    <tr>
+        <th>Name</th>
+        <th>Unit price</th>
+        <th>Qty</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody id="itemTableBody">
 
-
-
-        </tbody>
-    </table>
+    </tbody>
+</table>
 </div>
 
 
