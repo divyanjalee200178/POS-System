@@ -1,7 +1,6 @@
 let customer_arr = [];
 
 const loadCustomerTabel = () => {
-    // Clear the existing rows to avoid duplicates
     $("#customerTableBody").empty();
 
     customer_arr.map((item) => {
@@ -27,6 +26,37 @@ $("#cusbtn").on("click", function () {
     };
     customer_arr.push(customer);
 
-    // Load the updated table
+
     loadCustomerTabel();
+});
+
+let item_arr=[];
+
+const loadItemTable=()=>{
+    $("#itemTableBody").empty();
+
+    item_arr.map((item)=>{
+        let data=`<tr><td>${item.name}</td><td>${item.unit_price}</td><td>${item.qty}</td><td>${item.description}</td></tr>`;
+        $("#itemTableBody").append(data);
+    });
+}
+
+$("#itbtn").on("click", function () {
+    let name = $('#name').val();
+    let unit_price = $('#unitPrice').val();
+    let qty= $('#qty').val();
+    let description = $('#description').val();
+
+
+    let item = {
+        id: "",
+        name: name,
+        unit_price: unit_price,
+        qty:qty,
+        description:description
+    };
+    item_arr.push(item);
+
+
+    loadItemTable();
 });
