@@ -46,17 +46,9 @@ $("#cusbtn").on("click", function () {
     let contact = $('#contact').val();
 
     if (name.length === 0){
-        Swal.fire({
-            icon: "error",
-            title: "Invalid Input",
-            text: "Invalid Customer Name",
-        });
+        Swal.fire("Invalid customer name!");
     }else if(address.length === 0){
-        Swal.fire({
-            icon: "error",
-            title: "Invalid Input",
-            text: "Invalid Address",
-        });
+        Swal.fire("Invalid customer address!");
     }else if(!validEmail(email)){
         Swal.fire({
             icon: "error",
@@ -81,12 +73,20 @@ $("#cusbtn").on("click", function () {
 
         if (customer_arr.push(customer)){
 
-            Swal.fire({
-                position: "top-end",
-                icon: "success",
-                title: "Customer has been saved successfully!",
+            const Toast = Swal.mixin({
+                toast: true,
+                position: "center",
                 showConfirmButton: false,
-                timer: 1500
+                timer: 3000,
+                timerProgressBar: true,
+                didOpen: (toast) => {
+                    toast.onmouseenter = Swal.stopTimer;
+                    toast.onmouseleave = Swal.resumeTimer;
+                }
+            });
+            Toast.fire({
+                icon: "success",
+                title: "Customer save successfully"
             });
             loadCustomerTable();
             loadCustomers();

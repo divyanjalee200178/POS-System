@@ -146,8 +146,11 @@ $("#order_btn").on('click', function () {
     });
 
     Swal.fire({
-        title: "Order Placed Successfully!",
-        icon: "success"
+        position: "top-end",
+        icon: "success",
+        title: "Order placed successfully",
+        showConfirmButton: false,
+        timer: 1500
     });
 
     clearOrderForm();
