@@ -147,8 +147,8 @@ $("#item_update_btn").on("click",function (){
     setItemCode();
 });
 
-$("#cus_delete_btn").on("click",function (){
-    let index=item_delete_index;
+$("#item_delete_btn").on("click",function (){
+
 
     item_arr.splice(item_delete_index);
 
@@ -159,3 +159,8 @@ $("#cus_delete_btn").on("click",function (){
     setItemCode();
 
 });
+
+$("#item_clean_btn").on("click",function (){
+    cleanItemForm();
+});
+

@@ -32,7 +32,7 @@ const loadCustomerTable = () => {
 
 const cleanCustomerForm  = () => {
     $('#customer_id').val("");
-    $('#customerName').val("");
+    $('#customer_name').val("");
     $('#email').val("");
     $('#contact').val("");
     $('#address').val("");
@@ -173,6 +173,8 @@ $("#cus_delete_btn").on("click",function (){
     setCustomerId();
 
 });
-
+$("#cus_clean_btn").on("click",function (){
+    cleanCustomerForm();
+});
 
 

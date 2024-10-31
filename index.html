@@ -464,7 +464,7 @@
                 <div class="mb-3">
 
                     <div>
-                        <label for="contact" class="form-label">Contact No</label>
+                        <label for="contact" class="form-label">Mobile number</label>
                         <input type="text" class="form-control" id="contact">
                     </div>
                 </div>
@@ -472,7 +472,7 @@
                     <button type="button" class="btn btn-primary w-50" id="cusbtn">Add Customer</button>
                     <button type="button" class="btn btn-primary w-50" id="cus_update_btn">Update Customer</button>
                     <button type="button" class="btn btn-primary w-50" id="cus_delete_btn">Delete Customer</button>
-                    <button type="button" class="btn btn-primary w-50" id="cus_search_btn">Search Customer</button>
+                    <button type="button" class="btn btn-primary w-50" id="cus_clean_btn">Clear </button>
                 </div>
             </form>
         </div>
@@ -535,7 +535,7 @@
                 <button type="button" class="btn btn-primary w-50" id="itbtn">Add Item</button>
                 <button type="button" class="btn btn-primary w-50" id="item_update_btn">Update Item</button>
                 <button type="button" class="btn btn-primary w-50" id="item_delete_btn">Delete Item</button>
-                <button type="button" class="btn btn-primary w-50" id="item_search_btn">Search Item</button>
+                <button type="button" class="btn btn-primary w-50" id="item_clean_btn">Clear</button>
             </div>
         </form>
 
@@ -602,7 +602,7 @@
         <div class="row row-cols-2 row-xs-2 row-sm-4 row-md-4 row-lg-4 row-xl-2 row-xxl-2">
             <div class="mb-3">
                 <label id="iCode">Item Code</label>
-                <select class="form-select" aria-label="Default select example" id="items"></select>
+                <select class="form-select" aria-label="Default select example" id="itemSea"></select>
             </div>
             <div class="mb-3">
                 <label for="itemName" class="form-label" id="iName">Item name</label>
@@ -639,11 +639,11 @@
     <table  class="table table-bordered" >
         <thead>
         <tr class="table-light" style="border: 3px solid black">
-            <th scope="col" style="border: 2px solid black">Customer</th>
-            <th scope="col" style="border: 2px solid black">Item name</th>
-            <th scope="col" style="border: 2px solid black">UnitPrice</th>
-            <th scope="col" style="border: 2px solid black">Qty</th>
-            <th scope="col" style="border: 2px solid black">Total</th>
+            <th scope="col">Item Code</th>
+            <th scope="col">Description</th>
+            <th scope="col">Unit Price</th>
+            <th scope="col">Quantity</th>
+            <th scope="col">Total</th>
         </tr>
         </thead>
         <tbody id="orderTableBody">
@@ -651,6 +651,8 @@
         </tr>
         </tbody>
     </table>
+
+    <button type="button" class="btn btn-success" id="order_btn">Place Order</button>
 </div>
 
 
